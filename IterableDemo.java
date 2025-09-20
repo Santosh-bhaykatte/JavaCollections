@@ -1,9 +1,10 @@
 // Iterable - root interface for all collections except Map
 // only one abstract method
 /*
-* Iterator<T> iterator()
+* Iterator<E> iterator()
 * returned iterator works with hasNext(), next() and remove()
 
+* hasNext(), next() and remove() - Methods in Iterator<E> interface
 * */
 
 package javaCollections;

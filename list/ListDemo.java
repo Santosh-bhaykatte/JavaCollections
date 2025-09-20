@@ -28,7 +28,7 @@ List<E> subList(int fromIndex, int toIndex) //Returns a view of a portion of lis
 
 * */
 
-package javaCollections;
+package javaCollections.list;
 
 import java.util.ArrayList;
 import java.util.List;
