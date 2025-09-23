@@ -11,6 +11,16 @@ peek()    - Returns (but does not remove) the top element.
 empty()   - Checks if stack is empty.
 search(Object o)    - Returns 1-based position of object from top (−1 if not found).
 
+___________________________________
+Deque<Integer> stack = new ArrayDeque<>();
+stack.push(10);
+stack.push(20);
+System.out.println(stack.pop());  // 20
+
+* Faster than Stack (no synchronization overhead).
+* More flexible (Deque can be used as queue or stack).
+____________________________________
+
 * */
 
 package javaCollections.list;
