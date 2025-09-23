@@ -1,3 +1,31 @@
+/*
+
+Iterable
+  └── Collection
+        ├── List (ordered, allows duplicates, index-based)
+        │     ├── ArrayList
+        │     ├── LinkedList
+        │     └── Vector (legacy)
+        │           └── Stack (legacy)
+        │
+        ├── Set (unique elements, no duplicates)
+        │     ├── HashSet
+        │     │     └── LinkedHashSet
+        │     └── TreeSet
+        │
+        └── Queue (FIFO, special purpose)
+              ├── PriorityQueue
+              └── ArrayDeque
+
+        Map (NOT part of Collection, but very important)
+        ├── HashMap
+        │     └── LinkedHashMap
+        ├── TreeMap
+        └── Hashtable (legacy)
+
+
+* */
+
 // Iterable - root interface for all collections except Map
 // only one abstract method
 /*
