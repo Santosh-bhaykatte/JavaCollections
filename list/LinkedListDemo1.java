@@ -27,15 +27,33 @@ Access/Search is slow (O(n)) because it needs traversal.
 Allows duplicates & nulls.
 Not synchronized by default.
 
+* Important Methods
+
+Adding: add(), addFirst(), addLast(), offer(), offerFirst(), offerLast()
+Removing: remove(), removeFirst(), removeLast(), poll(), pollFirst(), pollLast()
+Accessing: get(), getFirst(), getLast(), peek(), peekFirst(), peekLast()
+
+
+* Differences -                 ArrayList       LinkedList
+1. Access by index -              O(1)            O(n)
+2. Insert/Delete in middle -      O(n)            O(1) if reference is known
+3. Insert/Delete at start -       O(n)            O(1)
+4. Memory                         Less            More (extra prev/next)
+5. Cache Locality                 Better          Poor
+
+* ArrayList still outperforms LinkedList in iteration & access because of cache locality
+
 * */
 
 package javaCollections.list;
 
+import java.util.List;
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class LinkedListDemo1 {
     public static void main(String[] args) {
-        LinkedList<String> list = new LinkedList<>();
+        List<String> list = new LinkedList<>();
 
         list.add("A");
         list.add("B");
@@ -43,22 +61,37 @@ public class LinkedListDemo1 {
 
         System.out.println(list);
 
-        list.addFirst("Start");
-        list.addLast("End");
+        ((LinkedList<String>) list).addFirst("Start");
+        ((LinkedList<String>) list).addLast("End");
 
         System.out.println(list.toString());
 
         list.remove("B");
         System.out.println(list);
 
-        list.removeLast();
+        ((LinkedList<String>) list).removeLast();
 
-        System.out.println("First: "+ list.getFirst());
-        System.out.println("Last: "+ list.getLast());
+        System.out.println("First: "+ ((LinkedList<String>) list).getFirst());
+        System.out.println("Last: "+ ((LinkedList<String>) list).getLast());
 
+        System.out.println();
+        System.out.println("Peeked ele: "+ ((LinkedList<String>) list).peek());
+        System.out.println("Peeked ele: "+ ((LinkedList<String>) list).peekFirst());
+        System.out.println("Peeked ele: "+ ((LinkedList<String>) list).peekLast());
+
+
+
+        System.out.println();
         // Iterate
         for(String s : list) {
             System.out.println(s);
+        }
+
+        System.out.println();
+        // Using ListIterator
+        ListIterator<String> listIterator = list.listIterator();
+        while (listIterator.hasNext()) {
+            System.out.println("Ele: "+ listIterator.next());
         }
     }
 }
