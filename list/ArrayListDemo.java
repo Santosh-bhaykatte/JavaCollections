@@ -5,6 +5,11 @@
 * Maintains insertion order.
 * Allows duplicate elements and null values.
 👉 It is not synchronized (multiple threads modifying it simultaneously can cause issues).
+*
+* _____________________________________________________________________________
+* It can not automatically shrink, capacity remains same after removing elements
+* trimToSize() → reduces capacity to current size.
+* _____________________________________________________________________________
 
 * public class ArrayList<E> extends AbstractList<E>
         implements List<E>, RandomAccess, Cloneable, Serializable {
@@ -54,7 +59,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ArrayListDemo1 {
+public class ArrayListDemo {
     static List<String> removeEleByIndex(int index, List<String> list) {
         int size = list.size();
         if (index < 0 || index >= size) {
