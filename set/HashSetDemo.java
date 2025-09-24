@@ -96,7 +96,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class SetDemo {
+public class HashSetDemo {
     public static void main(String[] args) {
         // ---------- HashSet ----------
         System.out.println("---- HashSet ----");
