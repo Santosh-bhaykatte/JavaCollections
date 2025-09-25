@@ -6,7 +6,7 @@ Iterable
         │     ├── ArrayList
         │     ├── LinkedList
         │     └── Vector (legacy)
-        │           └── Stack (legacy)
+        │           └── Stack (legacy) (LIFO)
         │
         ├── Set (unique elements, no duplicates)
         │     ├── HashSet
@@ -27,9 +27,12 @@ Iterable
 * */
 
 // Iterable - root interface for all collections except Map
+// Represents anything that can be looped over
 // only one abstract method
 /*
-* Iterator<E> iterator()
+
+public abstract Iterator<E> iterator();
+
 * returned iterator works with hasNext(), next() and remove()
 
 * hasNext(), next() and remove() - Methods in Iterator<E> interface

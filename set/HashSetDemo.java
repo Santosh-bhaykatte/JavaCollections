@@ -12,10 +12,13 @@ TreeSet: does not allow null (NullPointerException if added)
 _____________________________________________________
 
 * Key Characteristics -
+
 Unique elements only → no duplicates.
 No index-based access → unlike List, cannot get(0).
+_____________________________________________________
 
-Order depends on implementation:
+* Order depends on implementation:
+
 HashSet: unordered
 LinkedHashSet: insertion order      (HashSet + LinkedList)
 TreeSet: sorted order
@@ -57,7 +60,7 @@ No random/index-based access.
 
 Choice of implementation affects performance:
 HashSet faster but no order    O(1)
-TreeSet slower but sorted      O(log n)
+TreeSet slower but sorted/ordered      O(log n)
 
 Requires proper implementation of hashCode() and equals().
 _____________________________________________________
@@ -68,7 +71,7 @@ _____________________________________________________
 → Depends: HashSet/LinkedHashSet = yes (only 1), TreeSet = no. (NullPointerException)
 
 2) Difference between HashSet and HashMap?
-→ HashSet uses HashMap internally, stores elements as keys with dummy Object value.
+→ HashSet uses HashMap internally, stores elements as keys with dummy Object value (PRESENT).
 
 3) Why Set doesn’t allow duplicates?
 → Because internally uniqueness is ensured using hashing or comparison logic (hashCode() + equals() for HashSet, natural ordering for TreeSet).
@@ -101,7 +104,7 @@ public class HashSetDemo {
         // ---------- HashSet ----------
         System.out.println("---- HashSet ----");
         Set<String> hashSet = new HashSet<>();
-        hashSet.add("Banana");
+        hashSet.add("Banana");      //return HashMap.put("Banana", PRESENT) == null;
         hashSet.add("Apple");
         hashSet.add("Mango");
         hashSet.add("Apple");   //duplicate ignored

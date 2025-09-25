@@ -12,7 +12,7 @@ So hashing = fast lookup instead of scanning all elements.
 _____________________________________________________
 
 HashSet internally uses HashMap.
-When you do set.add("Apple"), HashSet actually does map.put("Apple", PRESENT) where PRESENT is a dummy object.
+When you do set.add("Apple"), HashSet actually does map.put("Apple", PRESENT) where PRESENT is a dummy object value.
 
 Step by Step:
 
@@ -64,8 +64,8 @@ class Student {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Student)) return false;
-        Student s = (Student) o;
+        if (!(o instanceof Student s)) return false;
+//        Student s = (Student) o;
         return id == s.id && Objects.equals(name, s.name);
     }
 
@@ -85,7 +85,7 @@ public class HashSetCollision {
 
         studentSet.add(s1);
         studentSet.add(s2);
-        studentSet.add(s3);
+        System.out.println(studentSet.add(s3));
         studentSet.add(new Student(3, "rob"));
 
         System.out.println("Set: "+ studentSet);

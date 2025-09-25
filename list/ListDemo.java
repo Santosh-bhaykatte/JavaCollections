@@ -1,10 +1,10 @@
 /*
 
-* List is a subinterface of Collection.
+* List - subinterface of Collection.
 * It represents an ordered collection (also called a sequence).
 * Duplicates are allowed (unlike Set).
 * null values are allowed
-* Provides positional access (via index like arrays).
+* Provides positional access (via index like arrays). O(1)
 * Maintains insertion order
 
 public interface List<E> extends Collection<E>
@@ -63,11 +63,15 @@ public class ListDemo {
 
         //iterating with listIterator
         ListIterator<String> listIterator = names.listIterator();
+
+        System.out.println();
+        System.out.println("Forward traversal: ");
         while (listIterator.hasNext()) {
             System.out.println("Forward: "+ listIterator.next());
         }
 
         System.out.println();
+        System.out.println("Backward traversal: ");
         while (listIterator.hasPrevious()) {
             System.out.println("Previous: "+ listIterator.previous());
         }

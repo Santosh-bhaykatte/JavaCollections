@@ -12,7 +12,7 @@ public class ArrayListSync {
             for (int i = 0; i < 1000; ++i) {
                 list.add(i);
             }
-        });
+        }, "thread-1");
 
         Thread t2 = new Thread(() -> {
             for (int i = 0; i < 1000; ++i) {

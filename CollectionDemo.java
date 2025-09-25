@@ -5,8 +5,8 @@
 * It represents a group of objects (called elements).
 * Subinterfaces: List, Set, Queue, Deque.
 
-* It only declares a container
-* Different operations e.g add(E e), addAll(Collection<> c), remove(Object o), size(), contains(Object o), clear(), isEmpty()
+* It only declares - A container to hold elements
+* Different operations e.g add(E e), addAll(Collection<? exteds T> c), remove(Object o), size(), contains(Object o), clear(), isEmpty()
 
 * Order & uniqueness is decided by it's SubInterfaces (List, Set, Queue)
 
@@ -44,7 +44,7 @@ public class CollectionDemo {
         System.out.println(fruits.isEmpty());
 
         //clear
-        fruits.clear();
+        fruits.clear();     //removes all elements
         System.out.println(fruits);
     }
 }

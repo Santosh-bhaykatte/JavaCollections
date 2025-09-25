@@ -26,7 +26,7 @@ RandomAccess → supports fast random access (get() is O(1)).
 Cloneable → supports shallow copy via clone().  //Only references are copied, not actual objects
 Serializable → can be serialized.
 
-* Internal Implementation
+* Internal Implementation:
 
 Backed by a dynamic array → transient Object[] elementData;
 
@@ -36,8 +36,7 @@ When full → grows by 50% (newCapacity = oldCapacity + oldCapacity/2).
 
 Index-based access like an array.
 
-Uses System.arraycopy() when shifting elements (insert/remove in middle).
-
+Uses System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length) when shifting elements (insert/remove in middle).
 
 * ✅ Advantages:
 
@@ -80,7 +79,7 @@ public class ArrayListDemo {
         /*
         List<String> list = new ArrayList<>();
 
-        list.add("sam");
+        list.add("sam");    //Expands initial capacity to 10
         list.add("john");
         list.add("edd");
         list.add("sam");
@@ -92,7 +91,7 @@ public class ArrayListDemo {
 
          */
         List<String> list = new ArrayList<>(List.of("A", "B", "C", "D"));
-        System.out.println(removeEleByIndex(2, list));
+//        System.out.println(removeEleByIndex(2, list));
         System.out.println(removeEleByIndex(1, list));
 
 //        String[] arr = new String[] {"A", "B", "C", "D"};
