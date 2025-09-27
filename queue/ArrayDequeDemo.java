@@ -53,9 +53,10 @@ public class ArrayDequeDemo {
         ArrayDeque<String> deque = new ArrayDeque<>();
 
         //Adding elements at both ends
-        deque.add("A");
-        deque.addFirst("B");
-        deque.addLast("C");
+        deque.add("B");
+        deque.addFirst("C");
+        deque.addLast("D");
+        deque.addFirst("A");
 
         System.out.println("Deque: "+ deque);
 
