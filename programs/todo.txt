@@ -1,0 +1,3 @@
+1. Write a program that takes a List of integers with duplicates ([1, 5, 2, 8, 5, 2, 9]) and prints a list of unique integers in sorted order. (Hint: Use a Set to help you).
+
+2. Create a Student class with id and name. Make an ArrayList of Student objects. Add 3 students. Then, remove the student at index 1 and print the final list.
