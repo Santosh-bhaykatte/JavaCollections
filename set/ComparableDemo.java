@@ -41,8 +41,8 @@ class Employee {
     }
     /*
     @Override
-    public int compareTo(Employee s) {
-        return this.id - s.id;
+    public int compareTo(Employee e) {
+        return this.id - e.id;
     }
 
      */
@@ -60,7 +60,7 @@ public class ComparableDemo {
         //Comparator for sorting by name
         Comparator<Employee> nameComp = (e1, e2) -> e1.name.compareTo(e2.name);
 
-        TreeSet<Employee> set = new TreeSet<>(nameComp);
+        TreeSet<Employee> set = new TreeSet<>(ageComp);
 
         set.add(new Employee(3, 23, "santosh"));
         set.add(new Employee(1, 27, "Mahesh"));

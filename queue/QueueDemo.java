@@ -6,7 +6,7 @@ It extends the Collection interface.
 Key Methods:                                       | If queue is empty
 
 boolean add(E e)    - inserts element at rear      | throws Exception If capacity is full
-boolean offer(E e)  - inserts element at rear      | returns false safely
+boolean offer(E e)  - inserts element at rear      | returns false safely If capacity is full
 
 E remove()          - removes head element         | throws NoSuchElementException
 E poll()            - removes head element         | returns null
@@ -48,7 +48,7 @@ public class QueueDemo {
 
         //Removing elements
         System.out.println("Remove: "+ queue.remove());     //throws exception if empty
-        System.out.println("Poll: "+ queue.poll());     //safely return null if empty
+        System.out.println("Poll: "+ queue.poll());     //returns null if empty
 
         System.out.println("Final Queue: "+ queue);
     }

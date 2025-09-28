@@ -1,5 +1,5 @@
 /*
-* ArrayList is a resizable array implementation of the List interface.
+* ArrayList - Resizable array implementation of the List interface.
 * Part of java.util package.
 * Unlike arrays (fixed size), ArrayList can grow/shrink dynamically.
 * Maintains insertion order.
@@ -21,7 +21,7 @@
 
 * Interfaces Implemented:
 
-List → ordered, duplicates allowed.
+List → ordered sequence, duplicates allowed.
 RandomAccess → supports fast random access (get() is O(1)).
 Cloneable → supports shallow copy via clone().  //Only references are copied, not actual objects
 Serializable → can be serialized.
@@ -46,7 +46,7 @@ Easy to use, widely adopted.
 
 ❌ Disadvantages:
 
-Slower insertions/removals in middle (O(n)) due to shifting.
+Slower insertions/removals in middle O(n) due to shifting.
 Consumes more memory (array may be partially empty).
 Not thread-safe (must use Collections.synchronizedList() for multithreading).
 

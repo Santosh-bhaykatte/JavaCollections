@@ -21,12 +21,12 @@ _____________________________________________________
 
 HashSet: unordered
 LinkedHashSet: insertion order      (HashSet + LinkedList)
-TreeSet: sorted order
+TreeSet: sorted/natural order
 _____________________________________________________
 
 * Implementations-
 
-a) HashSet - unordered
+a) HashSet - unordered collection of unique elements
 
 Backed by HashMap internally.   e.g add(E e) -> HashMap.put(Key, Present)
 Elements stored as keys, dummy Object as value.

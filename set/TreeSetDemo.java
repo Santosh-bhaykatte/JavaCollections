@@ -11,6 +11,7 @@ public class TreeSetDemo {
         treeSet.add(10);
         treeSet.add(20);
         treeSet.add(20);    //duplicate ignored
+//        treeSet.add(null);    //Not allowed
 
         System.out.println(treeSet);
 

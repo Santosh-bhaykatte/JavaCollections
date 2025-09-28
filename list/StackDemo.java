@@ -2,7 +2,7 @@
 Stack is legacy class, extends Vector in java.util package
 It inherits all Vector properties (dynamic array, synchronized).
 It follows the LIFO (Last-In, First-Out) principle.
-Being based on Vector → it is synchronized.
+Being based on Vector → It is synchronized.
 
 Methods:
 push(E e) - Pushes an element onto the top of the stack.

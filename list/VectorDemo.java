@@ -10,12 +10,13 @@ Vector(int initialCapacity, int capacityIncrement)
 Vector(Collection<? extends E> c)
 
 * Thread safety by default. Synchronized Methods using intrinsic lock
-* Lower performance in single threaded scenarios
+* Lower performance in single threaded scenarios due to synchronization overhead
 
 * */
 
 package javaCollections.list;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Vector;
