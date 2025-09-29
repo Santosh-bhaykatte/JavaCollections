@@ -16,15 +16,18 @@ public class BubbleSort {
             }
         }
     }
-    public static void main(String[] args) {
+    static void inputArray(int[] arr) {
         Scanner sc = new Scanner(System.in);
-        int[] arr = new int[7];
-
-        //Input
-        System.out.print("Enter numbers: ");
         for (int i = 0; i < arr.length; ++i) {
             arr[i] = sc.nextInt();
         }
+    }
+    public static void main(String[] args) {
+        int[] arr = new int[7];
+        //Input
+        System.out.print("Enter numbers: ");
+        inputArray(arr);
+
         bubbleSort(arr);
         System.out.println("bubble sort: "+ Arrays.toString(arr));
     }
