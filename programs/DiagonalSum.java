@@ -1,3 +1,4 @@
+// Time complexity - O(n)
 package javaCollections.programs;
 
 public class DiagonalSum {
