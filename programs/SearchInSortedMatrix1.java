@@ -1,7 +1,7 @@
 package javaCollections.programs;
 
-public class SearchInSortedMatrix {
-    static void searchInSortedMatrix1(int[][] arr, int n, int m, int key) {
+public class SearchInSortedMatrix1{
+    static void searchInSortedMatrix(int[][] arr, int n, int m, int key) {
         // O(n log n)
         for (int i = 0; i < n; ++i) {
             int start = 0;
@@ -28,6 +28,6 @@ public class SearchInSortedMatrix {
                 {32, 33, 39, 50, 53},
                 {34, 35, 40, 54, 60}
         };
-        searchInSortedMatrix1(arr, 5, 5, 54);
+        searchInSortedMatrix(arr, 5, 5, 54);
     }
 }
