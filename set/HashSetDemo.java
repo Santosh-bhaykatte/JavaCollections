@@ -1,6 +1,6 @@
-/* Set -
+/* Set (Interface)-
 
-* Set is a collection that does not allow duplicate elements.
+* Set is a collection that does not allow duplicate elements. (only unique elements)
 * It models the mathematical set abstraction.
 * Insertion order depends on the implementation (HashSet, LinkedHashSet, TreeSet).
 
@@ -28,7 +28,7 @@ _____________________________________________________
 
 a) HashSet - unordered collection of unique elements
 
-Backed by HashMap internally.   e.g add(E e) -> HashMap.put(Key, Present)
+Backed by HashMap internally.   e.g add(E e) -> HashMap.put(Key, PRESENT)
 Elements stored as keys, dummy Object as value.
 No ordering guarantee.
 Constant time operations (O(1)).  e.g add(E e), remove(Object o), contains(Object o) etc.
@@ -39,7 +39,7 @@ HashSet + doubly linked list.
 Maintains insertion order.
 Slightly slower than HashSet.
 
-c) TreeSet - sorted/ordered
+c) TreeSet - sorted/natural-ordering
 
 Backed by TreeMap (Red-Black tree) internally.
 Elements stored in sorted order.
@@ -50,19 +50,19 @@ _____________________________________________________
 
 * Advantages -
 
-Prevents duplicates automatically.
-Provides efficient operations depending on implementation.
-Specialized implementations for ordering (TreeSet) and insertion order (LinkedHashSet).
+1. Prevents duplicates automatically.
+2. Provides efficient operations depending on implementation.
+3. Specialized implementations for ordering (TreeSet) and insertion order (LinkedHashSet).
 
 * Disadvantages -
 
-No random/index-based access.
+1. No random/index-based access.
 
-Choice of implementation affects performance:
+2. Choice of implementation affects performance:
 HashSet faster but no order    O(1)
 TreeSet slower but sorted/ordered      O(log n)
 
-Requires proper implementation of hashCode() and equals().
+3. Requires proper implementation of hashCode() and equals().
 _____________________________________________________
 
 ****** Tricky Interview Questions **********

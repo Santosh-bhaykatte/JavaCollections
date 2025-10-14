@@ -1,6 +1,8 @@
 package javaCollections.set;
 
+import java.util.NavigableSet;
 import java.util.Set;
+import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class TreeSetDemo {

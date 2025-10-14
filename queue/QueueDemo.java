@@ -24,7 +24,10 @@ Methods like add/remove/element are strict (throws exception).
 
 LinkedList → can work as a Queue (FIFO).
 PriorityQueue → elements ordered by priority (not strictly FIFO).
+
 ArrayDeque → double-ended queue (can work as both Stack & Queue).
+           -> resizable circular array implementation of Deque interface
+           -> allows insertion & removal of elements from both ends - front (head) and rear (tail)
 
 * */
 

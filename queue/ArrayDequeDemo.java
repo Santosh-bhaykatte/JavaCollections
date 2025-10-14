@@ -2,11 +2,16 @@
 
 ArrayDeque (Array Double Ended Queue) is a resizable array-based implementation of Deque.
 
-Supports insertion & removal at both ends (head & tail).
+ArrayDeque maintains a circular array (default capacity = 16).
+Supports insertion & removal at both ends head (front) & tail (rear).
+
+Two pointers:
+head → index of first element
+tail → index after last element
 
 Can be used as:
-Queue (FIFO) → offer(), poll(), peek().
-Stack (LIFO) → push(), pop().
+Queue (FIFO) → offer(), poll(), peek()
+Stack (LIFO) → push(), pop(), peek()
 Null elements are not allowed.
 
 Faster than Stack and LinkedList for most use cases.
@@ -28,7 +33,7 @@ _________________________________________________________
 * Interview-Focused Points:
 
 ArrayDeque vs LinkedList:
-ArrayDeque is faster (array-based, less memory overhead).
+ArrayDeque is faster (array-based, less memory overhead, better cache locality).
 LinkedList uses more memory (node objects, pointers).
 
 ArrayDeque vs Stack:
@@ -68,7 +73,7 @@ public class ArrayDequeDemo {
         //stack behavior
         deque.push("X");
         deque.push("Y");
-        System.out.println("Stack Mode: "+ deque);  //[Y, X, A]
+        System.out.println("Stack Mode: "+ deque);  //[Y, X, C, B]
 
         System.out.println("Pop: "+ deque.pop());   //removes Y
     }

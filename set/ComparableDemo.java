@@ -5,14 +5,16 @@ A class implements Comparable<T> to define its natural/default order.
 Example: String, Integer, etc. already implement Comparable.
 
 You override the method:
-* public int compareTo(T o)
+  public int compareTo(T o) {
+       //custom implementation
+  }
 
 Returns 0 if equal
 Returns negative if this < o
 Returns positive if this > o
 _______________________________________________
 
-* Comparator (Custom Ordering):
+* Comparator<T> (Custom Ordering):
 
 * What if you want multiple ways of sorting? (by id, by name, etc.)
 
@@ -39,13 +41,12 @@ class Employee {
         this.age = age;
         this.name = name;
     }
-    /*
-    @Override
-    public int compareTo(Employee e) {
-        return this.id - e.id;
-    }
 
-     */
+//    @Override
+//    public int compareTo(Employee e) {
+//        return this.id - e.id;
+//    }
+
     @Override
     public String toString() {
         return id +"-"+ name;
