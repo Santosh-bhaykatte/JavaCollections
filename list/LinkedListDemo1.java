@@ -14,9 +14,24 @@ prev → reference to previous node
 data → actual element
 next → reference to next node
 
+_________________________________________________________________
+
 public class LinkedList<E>
     extends AbstractSequentialList<E>
     implements List<E>, Deque, Cloneable, Serializable
+
+_________________________________________________________________
+
+* Constructors -
+
+LinkedList<String> list = new LinkedList<>();
+
+Creates an empty doubly linked list.
+Internally first and last references are null.
+
+LinkedList<Integer> numbers = new LinkedList<>(List.of(1, 2, 3));
+
+Creates a new linked list containing elements of the given collection in iteration order.
 
 * Key Properties:
 
@@ -35,6 +50,7 @@ Accessing: get(), getFirst(), getLast(), peek(), peekFirst(), peekLast()
 
 
 * Differences -                 ArrayList       LinkedList
+
 1. Access by index -              O(1)            O(n)
 2. Insert/Delete in middle -      O(n)            O(1) if reference is known
 3. Insert/Delete at start -       O(n)            O(1)

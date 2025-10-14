@@ -11,6 +11,7 @@ public interface List<E> extends Collection<E>
 
 * ordered -> maintains insertion order
 * Duplicates are allowed
+* null values allowed
 * Indexed -> each element has an index
 
 Methods of List -
@@ -18,7 +19,7 @@ Methods of List -
 boolean add(int index, E e)                 //Add an element at specified index
 boolean addAll(int index, Collection<> c)   //Add elements of collection at specified index
 E get(int index)                            //returns element at index
-E set(int index, E e)                       //replaces element at index
+E set(int index, E e)                       //replaces element at index, returns replaced element
 int indexOf(Object o)                       //return index of first occurence
 int lastIndexOf(Object o)                   //return index of last occurence
 ListIterator<E> listIterator()              //Returns ListIterator for bi-directional traversal

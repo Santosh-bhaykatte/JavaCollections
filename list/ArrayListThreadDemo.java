@@ -1,9 +1,9 @@
 /*
 ArrayList.add() internally does:
 
-Ensure capacity
-Place element at elementData[size]
-Increment size
+1. Ensure capacity
+2. Place element at elementData[size]
+3. Increment size
 
 If two threads run in parallel:
 

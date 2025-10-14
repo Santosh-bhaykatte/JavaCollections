@@ -18,6 +18,16 @@
 
             //Overridden Methods of List<E>, Collection<E>
         }
+________________________________________________________________________________
+
+Constructors -
+
+* List<Integer> list = new ArrayList<>();       //creates an empty list with initial capacity = 10
+
+* List<String> list = new ArrayList<>(50);      //creates an empty list with given capacity
+* Helps avoid reallocation and copying if you know roughly how many elements will be added.
+
+* List<String> list = new ArrayList<>(List.of("A", "B", "C"));      //creates a new ArrayList containing all elements of the given collection, in the same order.
 
 * Interfaces Implemented:
 
@@ -25,6 +35,8 @@ List → ordered sequence, duplicates allowed.
 RandomAccess → supports fast random access (get() is O(1)).
 Cloneable → supports shallow copy via clone().  //Only references are copied, not actual objects
 Serializable → can be serialized.
+
+_______________________________________________________________________________
 
 * Internal Implementation:
 
@@ -73,7 +85,7 @@ public class ArrayListDemo {
         }
         arr[--size] = null;
 
-        return new ArrayList<>(Arrays.asList(arr).subList(0, size));
+        return Arrays.asList(arr).subList(0, size);
     }
     public static void main(String[] args) {
         /*
@@ -90,7 +102,7 @@ public class ArrayListDemo {
         System.out.println(list.contains("john"));
 
          */
-        List<String> list = new ArrayList<>(List.of("A", "B", "C", "D"));
+        List<String> list = new ArrayList<>(List.of("A", "B", "C", "D", "E"));
 //        System.out.println(removeEleByIndex(2, list));
         System.out.println(removeEleByIndex(1, list));
 
