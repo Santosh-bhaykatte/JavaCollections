@@ -6,7 +6,7 @@
 * Subinterfaces: List, Set, Queue, Deque.
 
 * It only declares - A container to hold elements
-* Different operations e.g add(E e), addAll(Collection<? exteds T> c), remove(Object o), size(), contains(Object o), clear(), isEmpty()
+* Different operations e.g add(E e), addAll(Collection<? extends T> c), remove(Object o), size(), contains(Object o), clear(), isEmpty()
 
 * Order & uniqueness is decided by it's SubInterfaces (List, Set, Queue)
 
@@ -24,26 +24,27 @@ public class CollectionDemo {
         //Collection reference with ArrayList implementation
         Collection<String> fruits = new ArrayList<>();
 
+        //add(E e)
         fruits.add("banana");   //add element
         fruits.add("Apple");
         fruits.add("grapes");
         fruits.add("orange");
 
-        //size
+        //size()
         System.out.println("No. fruits: "+ fruits.size());
         System.out.println(fruits);
 
-        //remove
+        //remove(Object o)
         System.out.println(fruits.remove("banana"));
         System.out.println(fruits);
 
-        //contains
+        //contains(Object o)
         System.out.println(fruits.contains("Apple"));
 
-        //isEmpty
+        //isEmpty()
         System.out.println(fruits.isEmpty());
 
-        //clear
+        //clear()
         fruits.clear();     //removes all elements
         System.out.println(fruits);
     }

@@ -18,6 +18,7 @@ class Book {
     public int hashCode() {
         return Objects.hash(author, title);
     }
+
     /*
     @Override
     public boolean equals(Object o) {
@@ -47,7 +48,7 @@ class Book {
 
     @Override
     public String toString() {
-        return "Book{"+ "title='"+ title +'\''+ ", author='"+ author + '\'' +'}';
+        return "Book {"+ "title='"+ title +'\''+ ", author='"+ author + '\'' +'}';
     }
 }
 
@@ -65,6 +66,10 @@ public class HashSetForCustomObject {
         boolean isAdded = books.add(new Book("1984", "George Orwell"));
 
         System.out.println("Was the duplicate book added? " + isAdded); // false
+
+        System.out.println(books.add(null));    //true
+        System.out.println(books.add(null));    //false
+
         System.out.println("Set of books: " + books.size()); // 2
         System.out.println(books);
     }

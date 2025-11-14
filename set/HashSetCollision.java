@@ -12,7 +12,7 @@ So hashing = fast lookup instead of scanning all elements.
 _____________________________________________________
 
 HashSet internally uses HashMap.
-When you do set.add("Apple"), HashSet actually does map.put("Apple", PRESENT) where PRESENT is a dummy object value.
+When you do set.add("Apple"), HashSet actually does HashMap.put("Apple", PRESENT) where PRESENT is a dummy object value.
 
 Step by Step:
 

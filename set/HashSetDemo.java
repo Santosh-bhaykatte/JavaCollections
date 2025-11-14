@@ -52,7 +52,7 @@ _____________________________________________________
 
 1. Prevents duplicates automatically.
 2. Provides efficient operations depending on implementation.
-3. Specialized implementations for ordering (TreeSet) and insertion order (LinkedHashSet).
+3. Specialized implementations for ordering/sorting (TreeSet) and insertion order (LinkedHashSet).
 
 * Disadvantages -
 

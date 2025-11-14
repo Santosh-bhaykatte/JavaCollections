@@ -1,23 +1,23 @@
 /*
 
-Iterable
-  └── Collection
-        ├── List (ordered, allows duplicates, index-based)
+Iterable (I)
+  └── Collection (I)
+        ├── List (ordered, allows duplicates, index-based)      (I)
         │     ├── ArrayList
         │     ├── LinkedList
         │     └── Vector (legacy)
         │           └── Stack (legacy) (LIFO)
         │
-        ├── Set (unique elements, no duplicates)
+        ├── Set (unique elements, no duplicates)            (I)
         │     ├── HashSet
         │     │     └── LinkedHashSet
         │     └── TreeSet
         │
-        └── Queue (FIFO, special purpose)
+        └── Queue (FIFO, special purpose)       (I)
               ├── PriorityQueue
               └── ArrayDeque
 
-        Map (NOT part of Collection, but very important)
+        Map (NOT part of Collection, but very important)        (I)
         ├── HashMap
         │     └── LinkedHashMap
         ├── TreeMap

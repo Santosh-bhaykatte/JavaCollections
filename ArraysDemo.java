@@ -20,9 +20,9 @@ public class ArraysDemo {
         System.out.println(Arrays.toString(copy));*/
 
         //Arrays.copyOfRange(arr, from, to)
-/*        int[] arr = {1, 3, 4, 5, 6};
+        int[] arr = {1, 3, 4, 5, 6};
         int[] copy = Arrays.copyOfRange(arr, 1, 4);
-        System.out.println(Arrays.toString(copy));*/
+        System.out.println(Arrays.toString(copy));
 
         //Arrays.sort(arr)
 /*        int[] arr = {2, 4, 6, 1, 0};
@@ -30,13 +30,13 @@ public class ArraysDemo {
         System.out.println(Arrays.toString(arr));*/
 
         //Arrays.binarySearch(arr, key)
-/*        int[] arr = {1, 3, 5, 2, 8};
-        System.out.println("Index: "+ Arrays.binarySearch(arr, 5));*/
+        int[] arr3 = {1, 3, 5, 2, 8};
+        System.out.println("Index: "+ Arrays.binarySearch(arr3, 5));
 
         //Arrays.equals(arr1, arr2)
-/*        int[] arr1 = {1, 2, 3};
+        int[] arr1 = {1, 2, 3};
         int[] arr2 = {1, 2, 3};
-        System.out.println(Arrays.equals(arr1, arr2));*/
+        System.out.println(Arrays.equals(arr1, arr2));
 
     }
 }

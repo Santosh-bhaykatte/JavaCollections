@@ -55,10 +55,10 @@ class Employee {
 
 public class ComparableDemo {
     public static void main(String[] args) {
-        //Comparator for sorting by age
+        //Comparator<T> for sorting by age
         Comparator<Employee> ageComp = (e1, e2) -> ((Integer) e1.age).compareTo(e2.age);
 
-        //Comparator for sorting by name
+        //Comparator<T> for sorting by name
         Comparator<Employee> nameComp = (e1, e2) -> e1.name.compareTo(e2.name);
 
         TreeSet<Employee> set = new TreeSet<>(ageComp);

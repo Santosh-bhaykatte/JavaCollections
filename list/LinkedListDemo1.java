@@ -1,5 +1,7 @@
 /* LinkedList
 
+* resizable Linked list implementation of List interface
+
 A class in Java that implements both:
 
 List interface → maintains insertion order, allows duplicates and null values.
@@ -31,7 +33,7 @@ Internally first and last references are null.
 
 LinkedList<Integer> numbers = new LinkedList<>(List.of(1, 2, 3));
 
-Creates a new linked list containing elements of the given collection in iteration order.
+Creates a new linked list containing elements of the given collection in insertion order.
 
 * Key Properties:
 
@@ -94,7 +96,6 @@ public class LinkedListDemo1 {
         System.out.println("Peeked ele: "+ ((LinkedList<String>) list).peek());
         System.out.println("Peeked ele: "+ ((LinkedList<String>) list).peekFirst());
         System.out.println("Peeked ele: "+ ((LinkedList<String>) list).peekLast());
-
 
 
         System.out.println();

@@ -47,10 +47,10 @@ public class QueueDemo {
 
         //Accessing head
         System.out.println("Peek: "+ queue.peek());     //returns null if empty
-        System.out.println("Element: "+ queue.element());   //throws exception if empty
+        System.out.println("Element: "+ queue.element());   //throws NoSuchElementException if empty
 
         //Removing elements
-        System.out.println("Remove: "+ queue.remove());     //throws exception if empty
+        System.out.println("Remove: "+ queue.remove());     //throws NoSuchElementException if empty
         System.out.println("Poll: "+ queue.poll());     //returns null if empty
 
         System.out.println("Final Queue: "+ queue);

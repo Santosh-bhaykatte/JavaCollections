@@ -8,7 +8,7 @@
 *
 * _____________________________________________________________________________
 * It can not automatically shrink, capacity remains same after removing elements
-* trimToSize() → reduces capacity to current size.
+* trimToSize() → reduces capacity to current size. (Not recommended)
 * _____________________________________________________________________________
 
 * public class ArrayList<E> extends AbstractList<E>
